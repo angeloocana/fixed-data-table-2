@@ -16,7 +16,9 @@ var columnTitles = {
   'companyName': 'Company',
   'city': 'City',
   'street': 'Street',
-  'zipCode': 'Zip Code'
+  'zipCode': 'Zip Code',
+  'name': 'Name',
+  'address': 'Address',
 };
 
 var columnWidths = {
@@ -86,8 +88,7 @@ class ReorderGroupsExample extends React.Component {
   }
 
   renderColumns(columnOrder) {
-    console.log('columnOrder: ', columnOrder);
-    return columnOrder.map(function (column, i) {
+    return columnOrder.map((column, i) => {
       return column.subColumns
         ? (
           <ColumnGroup
@@ -108,7 +109,7 @@ class ReorderGroupsExample extends React.Component {
             key={i}
             isReorderable={true}
             header={<Cell>{columnTitles[column.key]}</Cell>}
-            cell={<TextCell data={dataList} />}
+            cell={<TextCell data={this.state.dataList} />}
             fixed={fixedColumns.indexOf(column.key) !== -1}
             width={columnWidths[column.key]}
           />
@@ -117,12 +118,12 @@ class ReorderGroupsExample extends React.Component {
   }
 
   render() {
-    console.log('render');
     var { dataList } = this.state;
 
     return (
       <Table
         rowHeight={30}
+        groupHeaderHeight={50}
         headerHeight={50}
         rowsCount={dataList.getSize()}
         onColumnReorderEndCallback={this._onColumnReorderEndCallback}
@@ -136,5 +137,4 @@ class ReorderGroupsExample extends React.Component {
   }
 }
 
-console.log('ReorderGroupsExample: ', ReorderGroupsExample);
 module.exports = ReorderGroupsExample;

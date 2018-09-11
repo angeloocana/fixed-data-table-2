@@ -30,6 +30,7 @@ var EXAMPLE_COMPONENTS = {
   [ExamplePages.OBJECT_DATA_EXAMPLE.location]: require('../../examples/ObjectDataExample'),
   [ExamplePages.RESIZE_EXAMPLE.location]: require('../../examples/ResizeExample'),
   [ExamplePages.REORDER_EXAMPLE.location]: require('../../examples/ReorderExample'),
+  [ExamplePages.REORDER_COLUMN_GROUP_EXAMPLE.location]: require('../../examples/ReorderColumnGroupsExample'),
   [ExamplePages.HIDE_COLUMN_EXAMPLE.location]: require('../../examples/HideColumnExample'),
   [ExamplePages.SCROLL_TO_ROW_EXAMPLE.location]: require('../../examples/ScrollToRowExample'),
   [ExamplePages.SCROLL_TO_COLUMN_EXAMPLE.location]: require('../../examples/ScrollToColumnExample'),
