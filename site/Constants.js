@@ -60,6 +60,12 @@ exports.ExamplePages = {
     title: 'Reorderable columns',
     description: 'Table with drag and drop column reordering and a dummy "store" for persistence.',
   },
+  REORDER_COLUMN_GROUP_EXAMPLE: {
+    location: 'example-reorder-column-group.html',
+    fileName: 'ReorderColumnGroupsExample.js',
+    title: 'Reorderable groups',
+    description: 'Table with drag and drop column groups reordering and a dummy "store" for persistence.',
+  },
   SCROLL_TO_ROW_EXAMPLE: {
     location: 'example-scroll-to-row.html',
     fileName: 'ScrollToRowExample.js',
